@@ -1,0 +1,245 @@
+{
+  "headers": [
+    "广播场景",
+    "广播类型",
+    "中文",
+    "英文",
+    "粤语"
+  ],
+  "scenarios": {
+    "三超行李广播": [
+      {
+        "广播场景": "航前广播",
+        "广播类型": "三超行李广播",
+        "中文": "欢迎您选乘中国际航空股份有限公司的航班。为了确保旅行的舒适和客舱安全，每位超级经济舱或经济舱旅客仅限携带一件标准行李箱和一件小型随身物品登记。登机后请将小型随身物品放置在您的前方座椅下方，请将标准行李箱放置在头顶行李架内，如果您的随身行李不符合登机要求，我们将为您的行李办理托运手续。并请您务必取出不适宜托运的物品，如个人电子设备充电宝备用电池药物旅行证件以及贵重和易碎物品，为了确保全体乘客安全，您的行李将在通过二次安检后随后续航班运送至目的地，希望得到您的理解与支持，祝您旅途愉快。",
+        "英文": "Ladies and gentlemen thank you for choosing Star Alliance member Air China flights. To ensure everyone's comfort and safety during our flight, each Economy Class and Premium Economy Class passenger may carry one standard-sized suitcase and one small personal item onboard. Please place your small item under the seat in front of you and your suitcase in the overhead bin. If your carry-on baggage exceeds these requirements, they will need to be checked as baggage either at the gate or during boarding. Your bag will undergo additional security screening and be transported on a subsequent flight to your destination. Before doing so/that, please remove all prohibited items including: personal electronic devices, power banks, spare batteries, travel documents, essential medications, and any valuable or fragile items. We appreciate your understanding and cooperation. Thank you for flying with us, and we wish you a pleasant journey.",
+        "粤语": "歡迎你哋選乘中國國際航空股份有限公司嘅航班。為咗確保旅行嘅舒適同客艙安全，每位超級經濟艙或經濟艙旅客只可以帶一件標準行李箱同一件小型隨身物品登記。登機後請將小型隨身物品放喺你前面嘅座椅下面，請將標準行李箱放喺頭頂嘅行李架入面。如果你嘅隨身行李唔符合登機要求，我哋會為你嘅行李辦理寄艙手續。並且請你務必攞返唔適合寄艙嘅物品，例如個人電子設備、充電寶、備用電池、藥物、旅行證件，以及貴重同易碎物品。為咗確保全體乘客安全，你嘅行李會喺通過二次安檢之後，隨後續航班運送至目的地。希望得到你嘅理解同支持，祝你旅途愉快。"
+      }
+    ],
+    "登机口升舱广播": [
+      {
+        "广播场景": "",
+        "广播类型": "登机口升舱广播",
+        "中文": "女士们先生们，乘坐CAXXXX航班的旅客请注意，本次航班目前还有少量特价升舱的机会，如您持有经济舱6折及以上的客票，可以前往XX登机口咨询详情。\n",
+        "英文": "Ladies and gentlemen, passengers of Flight CAXXXX, your attention please. We currently have a limited number of last-minute cabin upgrade opportunities available. If you are holding an Economy Class ticket with a fare of 60 per cent off or higher, you are welcome to visit the boarding gate for details.\n",
+        "粤语": "女士們先生們，乘坐CAXXXX航班嘅旅客請注意，今次航班目前仲有少量特價升艙嘅機會，如果你持有經濟艙6折或以上嘅機票，可以前往XX登機閘口查詢詳情。\n"
+      }
+    ],
+    "领取雨衣广播 （雨天远机位登机前广播）": [
+      {
+        "广播场景": "",
+        "广播类型": "领取雨衣广播 （雨天远机位登机前广播）",
+        "中文": "尊敬的旅客：您好！您乘坐的航班停靠在远机位，由于当前阴雨天气，为保障您的出行体验，我们将在登机口为您提供免费雨衣，同时提醒您道路湿滑，请小心慢行。 如需其他帮助，请联系现场工作人员。祝您旅途愉快！",
+        "英文": "Dear Passenger, Your flight is parked at a remote stand. Due to the current rainy weather, to ensure your travel experience, we will provide free raincoats at the boarding gate to protect you from the wind and rain. We also remind you that the road is slippery, so please walk carefully. If you need any other assistance, please contact the on-site staff. Wish you a pleasant journey!\nYour aircraft is parked at a remote stand. As it is currently raining, we are providing complimentary raincoats at the gate for your convenience. Please also watch your step as the ground may be slippery. Should you require any assistance, please do not hesitate to contact our ground staff. We wish you a pleasant journey.",
+        "粤语": "尊敬嘅旅客：你好！你乘坐嘅航班停喺遠機位，由於而家落雨天氣，為咗保障你嘅出行體驗，我哋會喺登機閘口為你提供免費雨褸，同時提醒你道路濕滑，請小心慢行。如果需要其他幫助，請聯絡現場工作人員。祝你旅途愉快！"
+      }
+    ],
+    "自助登机广播": [
+      {
+        "广播场景": "",
+        "广播类型": "自助登机广播",
+        "中文": "欢迎您使用国航自助登机服务，您乘坐的由北京飞往上海的CA1234航班将采用自助登机方式登机。请携带婴儿、儿童的旅客、轮椅旅客及其它需要人工服务的旅客请在爱心通道进行人工登机；头等舱、商务舱、国航白金卡、星盟金卡、军人旅客请使用专属登机通道登机，经济舱旅客请在经济舱自助登机通道登机。请您在黄色脚印处排队等候，依次通过。感谢您的配合！",
+        "英文": "1.Welcome to board CA1234 to Shanghai via self-service boarding process. Passengers with infants, children, wheelchair or other special assistance please use the manned channel. First class, business class, Air China platinum card, Star Alliance gold card and military officers may use the exclusive channel, economy passengers please use the economy class self-service channel. Please wait along the yellow footprints in one line. Thank you！\n2.Welcome to Air China self-boarding. Your flight CA1234 from Beijing to Shanghai is ready for self-boarding. Passengers with infants, children, or wheelchairs, and those requiring assistance, please use the special service lane.（或者channel） First Class, Business Class, Air China Platinum members, Star Alliance Gold members, and military personnel may use the priority lane.（或者channel） Economy Class passengers, please proceed to the self-boarding lanes.（或者channel） Please line up on the yellow footprints and board in order. Thank you for your cooperation.",
+        "粤语": "歡迎你使用國航自助登機服務，你乘坐嘅由北京飛往上海嘅CA1234航班將採用自助登機方式登機。請帶住嬰兒、兒童嘅旅客、輪椅旅客同埋其他需要人工服務嘅旅客，請喺愛心通道進行人工登機；頭等艙、商務艙、國航白金卡、星盟金卡、軍人旅客請使用專屬登機通道登機，經濟艙旅客请喺經濟艙自助登機通道登機。請你喺黃色腳印處排隊等候，依次通過。多謝你嘅配合！"
+      }
+    ],
+    "催促广播": [
+      {
+        "广播场景": "登机广播",
+        "广播类型": "催促广播",
+        "中文": "乘坐CAxxxx航班前往伦敦的旅客请注意，您所乘坐的航班很快就要起飞了，请您听到广播后抓紧时间由C15号登机口登机，谢谢。",
+        "英文": "Final call for passengers on flight CAXXXX to London. The flight will depart shortly. Please proceed immediately to gate number C15. Thank you.",
+        "粤语": "乘坐CAxxxx航班前往倫敦嘅旅客請注意，你所乘坐嘅航班好快就要起飛喇，請你聽到廣播後盡快由C15號登機閘口登機，唔該。"
+      }
+    ],
+    "变更登机口广播": [
+      {
+        "广播场景": "",
+        "广播类型": "变更登机口广播",
+        "中文": "乘坐CAXXXX航班前往伦敦的旅客请注意，由于停机位置临时变更，您乘坐的航班登机口变更为CXX号，请带好随身物品由CXX号登机口登机 谢谢",
+        "英文": "Attention passengers for flight CAXXXX to London: Due to [operational changes], your boarding gate has been changed to CXX. Please proceed to gate CXX with all your belongings. Thank you for your understanding.",
+        "粤语": "乘坐CAXXXX航班前往倫敦嘅旅客請注意，由於停機位置臨時變更，你乘坐嘅航班登機閘口改為CXX號，請帶齊隨身物品由CXX號登機閘口登機，唔該。"
+      }
+    ],
+    "暂无登机口（登机口紧张）（下一航班已好，前一航班登机未结束时使用）": [
+      {
+        "广播场景": "",
+        "广播类型": "暂无登机口（登机口紧张）（下一航班已好，前一航班登机未结束时使用）",
+        "中文": "女士们、先生们： 我们抱歉地通知您，由于登机口紧张，___航班不能按时登机，请您在休息室内休息等候，登机时我们将广播通知，谢谢！",
+        "英文": "Ladies and Gentlemen, may I have your attention please.We regret to inform you that your flight CA_____ cannot board on time Due to a previous aircraft still at the gate.Please take a rest in the waiting hall. We will make announcement when boarding begins. Thank you for your understanding.",
+        "粤语": "女士們、先生們： 我哋好抱歉咁通知你，由於登機閘口緊張，___航班唔能夠按時登机，請你喺休息室休息等候，登機嗰陣我哋會廣播通知，唔該！"
+      }
+    ],
+    "登机口紧张": [
+      {
+        "广播场景": "",
+        "广播类型": "登机口紧张",
+        "中文": "女士们、先生们：我们抱歉地通知您，由于登机口紧张，CA1234航班不能按时登机，请您在本区域内休息等候，登机时我们将广播通知，谢谢！",
+        "英文": "Ladies and Gentlemen,We regret to inform you that the boarding for Flight CA1234 will be delayed due to a gate availability issue. Please wait here for our later boarding announcement. Thank you.",
+        "粤语": "女士們、先生們：我哋好抱歉咁通知你，由於登機閘口緊張，CA1234航班唔能夠按時登機，請你喺本區域內休息等候，登機嗰陣我哋會廣播通知，唔該！"
+      }
+    ],
+    "登机广播": [
+      {
+        "广播场景": "",
+        "广播类型": "登机广播",
+        "中文": "乘坐CAxxxx航班前往伦敦的旅客请注意，您所乘坐的航班现在开始登机，请您带好随身物品，出示登机牌由CXX号登机口登机，谢谢。",
+        "英文": "Attention passengers, CAXXXX is now boarding. Please have your boarding pass ready and proceed to gate number CXX. Thank you.",
+        "粤语": "乘坐CAxxxx航班前往倫敦嘅旅客請注意，你所乘坐嘅航班而家開始登機，請你帶齊隨身物品，出示登機牌由CXX號登機閘口登機，唔該。"
+      }
+    ],
+    "中转-航延时供应饮料及餐食 到登机口": [
+      {
+        "广播场景": "航班延误",
+        "广播类型": "中转-航延时供应饮料及餐食 到登机口",
+        "中文": "乘坐CAXXXX航班前往伦敦的旅客请注意，由于航班延误，我们现在为您提供免费的饮料/餐食，请您凭本航班登机牌到登机口领取 谢谢",
+        "英文": "Attention passengers of flight CAXXX to London: Due to the flight delay, complimentary drinks and meals are now available. Please present your boarding pass at gate CXX to receive your refreshments. Thank you for your patience.",
+        "粤语": "\n乘坐CAXXXX航班前往倫敦嘅旅客請注意，由於航班延誤，我哋而家為你提供免費嘅飲品/餐食，請你憑本航班登機牌到登機閘口領取，唔該。"
+      }
+    ],
+    "前序飞机晚到 机上准备工作未完成，延迟登机": [
+      {
+        "广播场景": "",
+        "广播类型": "前序飞机晚到 机上准备工作未完成，延迟登机",
+        "中文": "乘坐CAXXXX航班前往伦敦的旅客请注意，由于飞机进港晚到 机上准备工作尚未完成，我们将不能按时登机，请您在登机口休息等候，登机时我们将广播通知，谢谢",
+        "英文": "Attention passengers for flight CAXXXX to London: Due to the late arrival of the incoming aircraft and necessary cabin preparations, boarding will be delayed. Please remain in the gate area until further announcements are made. We apologize for the inconvenience and appreciate your patience. Thank you.",
+        "粤语": "乘坐CAXXXX航班前往倫敦嘅旅客請注意，由於飛機進港晚到，機上準備工作仲未完成，我哋將唔能夠按時登機，請你喺登機閘口休息等候，登機嗰陣我哋會廣播通知，唔該。"
+      }
+    ],
+    "天气原因": [
+      {
+        "广播场景": "",
+        "广播类型": "天气原因",
+        "中文": "女士们、先生们：我们抱歉地通知您，由于天气原因您乘坐的本次航班不能按时起飞。起飞时间待定，请您在本区域内休息等候，有进一步消息时我们将广播通知，谢谢！",
+        "英文": "1:Ladies and Gentlemen. We regret to inform you that your flight has been delayed due to poor weather condition. The departure time is currently pending. Please wait at the Gate area and for our further notice. Thank you!\n2:We regret to inform you of a weather-related delay. Departure time is to be announced. Please remain seated for further announcements. Thank you for your cooperation (或thank you)",
+        "粤语": "女士們、先生們：我哋好抱歉咁通知你，由於天氣原因，你乘坐嘅今次航班唔能夠按時起飛。起飛時間待定，請你喺本區域內休息等候，有進一步消息嗰陣我哋會廣播通知，唔該！"
+      }
+    ],
+    "延误到港": [
+      {
+        "广播场景": "",
+        "广播类型": "延误到港",
+        "中文": "您乘坐的CA1234航班预计15:30到达本港，请您在本区域休息等候，登机开始时我们将广播通知，谢谢！",
+        "英文": "Ladies and gentlemen, your flight CA1234 is estimated to arrive at 3:30 PM. Please wait in this area. We will announce once boarding begins. Thank you.",
+        "粤语": "你乘坐嘅CA1234航班預計15:30到達本港，請你喺本區域休息等候，登機開始嗰陣我哋會廣播通知，唔該！"
+      }
+    ],
+    "延误推时": [
+      {
+        "广播场景": "",
+        "广播类型": "延误推时",
+        "中文": "您乘坐的CA1234起飞时间预计推迟到18:00，请您在本区域休息等候，登机时我们将广播通知，谢谢！",
+        "英文": "Ladies and gentlemen, the estimated arrival time for flight CA1234 has been revised to 18:00. Please wait here for further notice. Thank you for your patience.\n",
+        "粤语": "你乘坐嘅CA1234起飛時間預計推遲到18:00，請你喺本區域休息等候，登機嗰陣我哋會廣播通知，唔該！\n"
+      }
+    ],
+    "故障晚到，延迟登机（新版）": [
+      {
+        "广播场景": "",
+        "广播类型": "故障晚到，延迟登机（新版）",
+        "中文": "女士们、先生们：我们抱歉地通知您，由于飞机故障，您乘坐的航班不能按时到达，请您在本区域内休息等候，飞机到港时我们将广播通知，谢谢！",
+        "英文": "Ladies and gentlemen, we regret to inform you that your arriving aircraft has been delayed due to a technical issue. Please remain in this area. We will announce immediately when the aircraft arrives. Thank you for your patience.",
+        "粤语": "女士們、先生們：我哋好抱歉咁通知你，由於飛機故障，你乘坐嘅航班唔能夠按時到達，請你喺本區域內休息等候，飛機到港嗰陣我哋會廣播通知，唔該！\n航班延误通知（新版）"
+      }
+    ],
+    "机械故障": [
+      {
+        "广播场景": "",
+        "广播类型": "机械故障",
+        "中文": "女士们、先生们：我们抱歉地通知您，由于机械故障您乘坐的本次航班不能按时起飞。起飞时间待定，请您在本区域内休息等候，有进一步消息时我们将广播通知，谢谢！",
+        "英文": "Ladies and Gentlemen, We regret to inform you that your flight has been delayed due to mechanical problem.The departure time is currently pending.Please wait at the Gate area for our further notice. Thank you!",
+        "粤语": "女士們、先生們：我哋好抱歉咁通知你，由於機械故障，你乘坐嘅今次航班唔能夠按時起飛。起飛時間待定，請你喺本區域內休息等候，有進一步消息嗰陣我哋會廣播通知，唔該！"
+      }
+    ],
+    "流控晚到，延迟登机（新版）": [
+      {
+        "广播场景": "",
+        "广播类型": "流控晚到，延迟登机（新版）",
+        "中文": "女士们、先生们：我们抱歉地通知您，由于本场流量控制，您乘坐的航班不能按时到达，请您在本区域内休息等候，飞机到港时我们将广播通知，谢谢！",
+        "英文": "Ladies and gentlemen, your flight has been delayed due to traffic flow control. Please wait in this area for further updates. Thank you.",
+        "粤语": "女士們、先生們：我哋好抱歉咁通知你，由於本場流量管制，你乘坐嘅航班唔能夠按時到達，請你喺本區域內休息等候，飛機到港嗰陣我哋會廣播通知，唔該！"
+      }
+    ],
+    "航空管制": [
+      {
+        "广播场景": "",
+        "广播类型": "航空管制",
+        "中文": "女士们、先生们：我们抱歉地通知您，由于航空管制您乘坐的本次航班不能按时起飞。起飞时间待定，请您在本区域内休息等候，有进一步消息时我们将广播通知，谢谢！",
+        "英文": "Ladies and Gentlemen. We regret to inform you that your flight has been delayed due to air traffic control. The departure time is currently pending. Please wait at the Gate area for our further notice. Thank you!",
+        "粤语": "女士們、先生們：我哋好抱歉咁通知你，由於航空管制，你乘坐嘅今次航班唔能夠按時起飛。起飛時間待定，請你喺本區域內休息等候，有進一步消息嗰陣我哋會廣播通知，唔該！"
+      }
+    ],
+    "航路天气": [
+      {
+        "广播场景": "",
+        "广播类型": "航路天气",
+        "中文": "女士们、先生们：我们抱歉地通知您，由于航路天气您乘坐的本次航班不能按时起飞。起飞时间待定，请您在本区域内休息等候，有进一步消息时我们将广播通知，谢谢！",
+        "英文": "Ladies and Gentlemen,. We regret to inform you that your flight has been delayed due to poor weather condition enroute. The departure time is currently pending. Please remain in this area and wait for further announcements. Thank you!",
+        "粤语": "女士們、先生們：我哋好抱歉咁通知你，由於航路天氣，你乘坐嘅今次航班唔能夠按時起飛。起飛時間待定，請你喺本區域內休息等候，有進一步消息嗰陣我哋會廣播通知，唔該！"
+      }
+    ],
+    "飞机调配": [
+      {
+        "广播场景": "",
+        "广播类型": "飞机调配",
+        "中文": "女士们、先生们：我们抱歉地通知您，由于飞机调配您乘坐的本次航班不能按时起飞。起飞时间待定，请您在本区域内休息等候，有进一步消息时我们将广播通知，谢谢！",
+        "英文": "Ladies and gentlemen, we regret to announce a delay due to aircraft scheduling. The departure time is currently pending. Please remain in the boarding area for further announcements. Thank you!",
+        "粤语": "女士們、先生們：我哋好抱歉咁通知你，由於飛機調配，你乘坐嘅今次航班唔能夠按時起飛。起飛時間待定，請你喺本區域內休息等候，有進一步消息嗰陣我哋會廣播通知，唔該！"
+      }
+    ],
+    "天气取消（国内）": [
+      {
+        "广播场景": "航班取消",
+        "广播类型": "天气取消（国内）",
+        "中文": "女士们、先生们：我们抱歉地通知：您乘坐的 CA1234 次航班因天气原因决定取消今日飞行。对此造成的不便，我们向您致以诚挚歉意。请您优先通过航空公司官方APP或客服热线95583在线办理；也可前往机场四层J/K区自助改签机或国航售票柜台现场办理。已办理托运的旅客，请至45号行李传送带领取行李。如需退票的旅客，请联系您的原购票渠道办理，您可通过国航APP或扫描登机口航显二维码申领《航班取消证明》。再次感谢您的理解与配合！ 1",
+        "英文": "Ladies and gentlemen,We regret to inform you that flight CA1234 has been canceled today due to weather conditions. We sincerely apologize for the inconvenience caused.To rebook your travel, we recommend using the Air China official app or calling our service hotline at 95583 for online assistance. Alternatively, you may proceed to the self-service kiosks in Area J/K on the 4th floor or visit the Air China ticketing counter.If you have checked luggage, please collect your baggage at Carousel 45.For ticket refunds, please contact your original booking channel.A Flight Cancellation Certificate can be obtained via the Air China app or by scanning the QR code displayed at the boarding gate.Thank you for your understanding and cooperation.",
+        "粤语": "女士們、先生們：我哋好抱歉咁通知：你乘坐嘅 CA1234 次航班因天氣原因決定取消今日飛行。對此造成嘅不便，我哋向你致以誠摯歉意。請你優先通過航空公司官方APP或客服熱線95583喺線辦理；亦可前往機場四層J/K區自助改簽機或國航售票櫃檯現場辦理。已經辦理寄艙嘅旅客，請去45號行李傳送帶攞返行李。如需退票嘅旅客，請聯絡你嘅原購票渠道辦理，你可通過國航APP或掃描登機閘口航顯QR code申領《航班取消證明》。再次多謝你嘅理解與配合！"
+      }
+    ],
+    "天气取消（国际）": [
+      {
+        "广播场景": "",
+        "广播类型": "天气取消（国际）",
+        "中文": "女士们、先生们：我们抱歉地通知：您乘坐的 CA1234 次航班因天气原因决定取消今日飞行。对此造成的不便，我们向您致以诚挚歉意。 请您优先通过航空公司官方APP或客服热线95583在线办理；也可前往国航售票柜台现场办理。已办理托运的旅客，请至41号行李传送带领取行李。如需退票的旅客，请联系您的原购票渠道办理，您可通过国航APP或扫描登机口航显二维码申领《航班取消证明》。再次感谢您的理解与配合！",
+        "英文": "Ladies and gentlemen,We regret to inform you that flight CA1234 has been canceled today due to weather conditions. We sincerely apologize for the inconvenience caused.To rebook your travel, we recommend using the Air China official app or calling our service hotline at 95583 for online assistance. Alternatively, you may proceed to the Air China ticketing counter.If you have checked luggage, please collect your baggage at Carousel 41.For ticket refunds, please contact your original booking channel.A Flight Cancellation Certificate can be obtained via the Air China app or by scanning the QR code displayed at the boarding gate.Thank you for your understanding and cooperation.",
+        "粤语": "女士們、先生們：我哋好抱歉咁通知：你乘坐嘅 CA1234 次航班因天氣原因決定取消今日飛行。對此造成嘅不便，我哋向你致以誠摯歉意。請你優先通過航空公司官方APP或客服熱線95583喺線辦理；亦可前往國航售票櫃檯現場辦理。已經辦理寄艙嘅旅客，請去41號行李傳送帶攞返行李。如需退票嘅旅客，請聯絡你嘅原購票渠道辦理，你可通過國航APP或掃描登機閘口航顯QR code申領《航班取消證明》。再次多謝你嘅理解與配合！"
+      }
+    ],
+    "经济补偿（新版）": [
+      {
+        "广播场景": "",
+        "广播类型": "经济补偿（新版）",
+        "中文": "女士们、先生们：由于国航原因，您选乘的CA1234航班延误超过4小时，给您带来的不便我们深表歉意！ 我们将通过中国国航APP为您提供经济补偿，感谢您的支持与理解!",
+        "英文": "Ladies and gentlemen,We sincerely apologize for the delay of over 4 hours to your flight CA1234 due to operational reasons. We deeply regret any inconvenience caused.As a gesture of our apology, we will provide compensation through the Air China Official APP. We appreciate your understanding and patience.",
+        "粤语": "女士們、先生們：由於國航原因，你選乘嘅CA1234航班延誤超過4小時，帶俾你嘅不便我哋深表歉意！ 我哋將通過中國國航APP為你提供經濟補償，多謝你嘅支持與理解!"
+      }
+    ],
+    "宾馆休息及住宿提供.版本1 (延误)": [
+      {
+        "广播场景": "",
+        "广播类型": "宾馆休息及住宿提供.版本1 (延误)",
+        "中文": "女士们、先生们：您选乘的CA1234航班延误，由此给您带来的不便我们深表歉意！由于航班延误时间较长，现在我们为您统一安排酒店休息，请您携带好随身物品，前往T3C航站楼二层国际到达B出口对面的国航中转服务柜台。国航工作人员将为您统一安排车辆前往酒店办理入住手续。感谢您的支持与理解!",
+        "英文": "Ladies and Gentlemen, We apologize for the delay of your flight CA1234 and any inconvenience this may have caused.Due to the extended delay, we have arranged hotel accommodations for all affected passengers. Please gather your personal belongings and proceed to the Air China Transit Service Counter, located opposite Exit B of International Arrivals (Level 2, Terminal T3C). Our staff will assist with transportation to the hotel for check-in.Thank you for your patience and understanding.",
+        "粤语": "女士們、先生們：你選乘嘅CA1234航班延誤，對此帶俾你嘅不便我哋深表歉意！由於航班延誤時間比較長，而家我哋為你統一安排酒店休息，請你帶齊隨身物品，前往T3C客運大樓二層國際到達B出口對面嘅國航中轉服務櫃檯。國航工作人員會為你統一安排車輛前往酒店辦理入住手續。多謝你嘅支持與理解!"
+      }
+    ],
+    "宾馆休息及住宿提供.版本2 (取消)": [
+      {
+        "广播场景": "",
+        "广播类型": "宾馆休息及住宿提供.版本2 (取消)",
+        "中文": "女士们、先生们：您选乘的CA1234航班取消，次日补班航班待定。由此给您带来的不便我们深表歉意！现在我们为您统一安排酒店休息，请您携带好随身物品，前往T3C航站楼二层国际到达B出口对面的国航中转服务柜台。国航工作人员将为您统一安排车辆前往酒店办理入住手续。如您在原航班有托运行李，请您务必先前往T3C航站楼二层国内行李提取厅C45号传送带提取行李后，再前往国航中转服务柜台。",
+        "英文": "Ladies and Gentlemen, We sincerely regret to inform you that your flight CA1234 has been canceled,A recovery flight will be scheduled for tomorrow, with the specific time to be announced. We deeply apologize for any inconvenience caused. We have arranged hotel accommodations for all affected passengers. Please Gather your personal belongings and proceed to the Air China Transit Service Counter (located opposite Exit B in the International Arrivals Hall on Level 2 of Terminal 3C)Our staff will coordinate transportation to the hotel for check-in. If you have checked luggage, please first retrieve it at Carousel C45 in the Domestic Baggage Claim Hall (on Level 2 of Terminal 3C) before proceeding to the transit counter. Thank you for your understanding and cooperation.",
+        "粤语": "女士們、先生們：你選乘嘅CA1234航班取消，第二日補班航班待定。對此帶俾你嘅不便我哋深表歉意！而家我哋為你統一安排酒店休息，請你帶齊隨身物品，前往T3C客運大樓二層國際到達B出口對面嘅國航中轉服務櫃檯。國航工作人員會為你統一安排車輛前往酒店辦理入住手續。如果你喺原航班有寄艙行李，請你務必先前往T3C客運大樓二層國內行李提取廳C45號傳送帶攞返行李之後，再前往國航中轉服務櫃檯。多謝你嘅理解同配合。"
+      }
+    ],
+    "专项检查": [
+      {
+        "广播场景": "专项检查",
+        "广播类型": "专项检查",
+        "中文": "根据美国交通安全委员会的规定，登机开始时我们将进行所有手提行李及人身的再次安全检查。所有液态物品禁止携带登机，否则将会被安检没收。请在登机前处理您的液态物品。感谢您的理解与合作！",
+        "英文": "According to TSA security requirements, a secondary security check including all carry-on baggage and personal check will be performed during our boarding process. No liquids or gels are permitted to be carried on board; such items will be confiscated by security. We ask that all passengers finish consuming their beverages before boarding. Thank you for your understanding and cooperation.",
+        "粤语": "根據美國交通安全委員會嘅規定，登機開始嗰陣我哋會進行所有手提行李同人身嘅再次安全檢查。所有液態物品禁止攜帶登機，否則會被安檢沒收。請喺登機前處理你嘅液態物品。多謝你嘅理解同合作！"
+      }
+    ]
+  }
+}

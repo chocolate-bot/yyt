@@ -1,0 +1,3065 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orange UI 设计系统 - 有目的的设计</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    /* =====================================================
+       Orange UI 设计系统 v3.1
+       =====================================================
+
+       设计哲学 - 三位大师的智慧融合
+       Philosophy of Design - Wisdom from Three Masters
+
+       ═══════════════════════════════════════════════════════
+
+       I. Dieter Rams - "Weniger, aber besser"
+          少即是多，但要更好
+
+          设计的本质不在于添加，而在于去除。
+          每一个元素都必须证明其存在的必要性。
+          如果一个元素无法改善功能，它就不应该存在。
+
+          十诫 (Ten Principles):
+          ─────────────────────────────────────────────────────
+          1. 好的设计是革新的 (innovative)
+             — 技术的可能性永远不会穷尽
+          2. 好的设计使产品有用 (useful)
+             — 功能是设计的起点，而非终点
+          3. 好的设计是美的 (aesthetic)
+             — 美学品质是产品有用性的组成部分
+          4. 好的设计使产品易于理解 (understandable)
+             — 产品应该自我解释
+          5. 好的设计是谦逊的 (unobtrusive)
+             — 产品如同工具，既非装饰也非艺术品
+          6. 好的设计是诚实的 (honest)
+             — 不夸大功能、不隐藏真实
+          7. 好的设计是持久的 (long-lasting)
+             — 避免时髦，永不过时
+          8. 好的设计考虑每个细节 (thorough)
+             — 没有什么是任意的或留给偶然的
+          9. 好的设计是环保的 (environmentally-friendly)
+             — 保护资源，减少污染
+          10. 好的设计是尽可能少的设计 (as little as possible)
+              — 少即是多，回归纯粹
+
+       ═══════════════════════════════════════════════════════
+
+       II. 原研哉 (Kenya Hara) - 白之美学
+           The Aesthetics of White
+
+           白不是颜色，而是一种感知方式。
+           空不是虚无，而是充满可能性的容器。
+           设计不是创造形式，而是唤醒感知。
+
+           核心概念:
+           ─────────────────────────────────────────────────────
+           • 空 (Emptiness / Ku)
+             留白不是空无，而是接纳一切可能性的器皿。
+             如同茶碗的空，等待茶水注入；
+             如同纸张的白，等待笔墨书写。
+             空是最大的丰富。
+
+           • Exformation (唤起)
+             不是传递信息 (information)，
+             而是唤起感知 (exformation)。
+             让观者自己去发现、去感受、去理解。
+             设计师不是说话者，而是引导者。
+
+           • 白 (White / Shiro)
+             白色不是RGB的255,255,255，
+             而是对纯净、对本源的追求。
+             白是所有颜色的起点，也是终点。
+
+           • 触觉 (Haptic Sense)
+             设计应该唤起全部感官。
+             视觉之外，还有触觉、质感、温度。
+             数字界面也应该让人"感受"到质地。
+
+           • 简洁即复杂的解决
+             简洁不是简单，
+             而是经过深思熟虑后达到的清晰。
+             复杂问题的最高解决方案往往看起来简单。
+
+       ═══════════════════════════════════════════════════════
+
+       III. Jony Ive - 极简主义与材质真实
+            Minimalism and Material Honesty
+
+            好的设计应该看起来"理所当然"，
+            仿佛它本该如此，别无他法。
+            这种必然性来自对问题的深刻理解，
+            以及对工艺的极致追求。
+
+            设计原则:
+            ─────────────────────────────────────────────────────
+            • Inevitable Design (必然的设计)
+              当你看到一个好设计时，你会感到：
+              "它只能是这样，不可能是别的样子。"
+              这种必然性是设计师深度思考的结果。
+
+            • Material Honesty (材质诚实)
+              尊重每种材质的本性。
+              铝应该看起来像铝，玻璃应该像玻璃。
+              不要让塑料假装是金属。
+              在数字世界，阴影应该诚实地表达层次。
+
+            • Precision (精确)
+              细节不是细节，细节创造设计。
+              1像素的差异可能决定感受的质变。
+              对圆角、间距、色值的执念不是强迫症，
+              而是对完美的追求。
+
+            • Depth through Subtlety (微妙的深度)
+              不需要浮夸的效果来创造视觉层次。
+              微妙的阴影变化、轻微的色彩过渡，
+              就能创造出丰富的空间感。
+
+            • Calm Technology (平静的技术)
+              技术应该服务于人，而非干扰人。
+              好的界面应该让人忘记它的存在，
+              专注于要完成的任务。
+
+       ═══════════════════════════════════════════════════════
+
+       核心理念 (Core Philosophy):
+
+       "Color with purpose, not decoration."
+       颜色服务于功能，而非仅仅装饰。
+
+       每一种颜色的选择都必须回答这个问题：
+       "它在这里的目的是什么？"
+
+       天蓝 (#7BCBFF) — 传达信任与开放
+       柔黄 (#FFE66A) — 表达温暖与重要性
+       薄荷 (#6FD8C7) — 确认成功与积极
+       珊瑚 (#FF998F) — 警示错误与注意
+       米白 (#F7F3EC) — 创造呼吸与留白
+
+       ═══════════════════════════════════════════════════════
+
+       Neo-Brutalist 的选择:
+
+       为什么选择粗犷主义？因为它是诚实的。
+       硬阴影不假装是真实的阴影，
+       它承认自己是数字的、人造的。
+       粗边框不隐藏结构，
+       它诚实地展示元素的边界。
+
+       这与 Rams 的"诚实"、Hara 的"本质"、
+       Ive 的"材质真实"一脉相承。
+
+    ===================================================== */
+
+    :root {
+      /* ========== Light Theme (Orange Palette) ========== */
+
+      /* 背景层次 - 原研哉的"空"：留白创造呼吸感 */
+      --bg: #F7F3EC;              /* 奶油米白 - 温暖而不刺眼 */
+      --bg-secondary: #FCFAF6;    /* 近白次级背景 */
+      --card: #FFFDFA;            /* 卡片纯白 - Jony Ive 的材质真实 */
+      --card-hover: #F9F5EE;      /* 卡片悬停 */
+
+      /* 文字层次 - Dieter Rams：清晰的层次结构 */
+      --text: #35322F;            /* 主文字 - 深中灰 */
+      --text-secondary: #5E5A55;  /* 次要文字 */
+      --text-muted: #8B847C;      /* 禁用/提示，加深以提升可读性 */
+
+      /* 边框与阴影 - Neo-Brutalist 诚实的结构 */
+      --border: #999188;          /* 主边框色 */
+      --border-light: #DED8CF;    /* 浅边框 */
+      --shadow-color: #B9B2A8;    /* 阴影颜色 */
+
+      /* 品牌强调色 - 有目的的色彩 */
+      --primary: #7BCBFF;         /* 天蓝 - 信任与开放 */
+      --primary-hover: #5ABBFF;   /* 悬停态 */
+      --primary-active: #3EA9F6;  /* 激活态 */
+
+      --accent: #FFE66A;          /* 柔黄 - 辅助强调 */
+      --accent-hover: #FFDB3A;    /* 悬停态 */
+      --accent-text: #4F3C00;
+      --accent-bg: rgba(255, 230, 106, 0.38);
+
+      /* 语义色 - 功能决定颜色 */
+      --success: #6FD8C7;         /* 薄荷绿 - 积极与完成 */
+      --success-bg: #EAF9F5;
+      --success-text: #1E6558;
+      --warning: #F6DA78;         /* 浅日照黄 - 注意与谨慎 */
+      --warning-bg: rgba(246, 218, 120, 0.20);
+      --warning-text: #665000;
+      --error: #FF998F;           /* 珊瑚粉 - 警示与停止 */
+      --error-bg: #FFE7E2;
+      --error-text: #993F35;
+      --info: #7BCBFF;            /* 复用主蓝 - 信息与平静 */
+      --info-bg: #EAF5FF;
+      --info-text: #2B6CA3;
+
+      /* 系统值 - Rams 的精确 */
+      --radius-sm: 2px;
+      --radius: 4px;
+      --radius-lg: 8px;
+      --radius-full: 9999px;
+
+      --border-width: 1.5px;
+      --control-sm: 36px;
+      --control-md: 44px;
+      --control-lg: 52px;
+
+      /* Neo-Brutalist 硬阴影 - 诚实的深度表达 */
+      --shadow-xs: 2px 2px 0 0 var(--shadow-color);
+      --shadow-sm: 3px 3px 0 0 var(--shadow-color);
+      --shadow: 5px 5px 0 0 var(--shadow-color);
+      --shadow-lg: 7px 7px 0 0 var(--shadow-color);
+      --shadow-xl: 10px 10px 0 0 var(--shadow-color);
+
+      /* 间距系统 (8pt grid) - 数学的和谐 */
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-5: 20px;
+      --space-6: 24px;
+      --space-8: 32px;
+      --space-10: 40px;
+      --space-12: 48px;
+      --space-16: 64px;
+
+      /* 动画 - 自然的节奏 */
+      --duration-fast: 150ms;
+      --duration: 200ms;
+      --duration-slow: 300ms;
+      --ease: ease-in-out;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+      /* 字体 */
+      --font-sans: 'Inter', 'Noto Sans SC', 'PingFang SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    }
+
+    /* ========== Dark Theme ========== */
+    [data-theme="dark"] {
+      --bg: #1E1916;
+      --bg-secondary: #28221F;
+      --card: #2C2521;
+      --card-hover: #352C27;
+
+      --text: #F8F3EC;
+      --text-secondary: #D5CBC0;
+      --text-muted: #94877C;
+
+      --border: #E7DDD1;
+      --border-light: #554B43;
+      --shadow-color: #000000;
+
+      --primary: #7BCBFF;
+      --primary-hover: #5ABBFF;
+      --primary-active: #3EA9F6;
+
+      --accent: #FFE66A;
+      --accent-hover: #FFED91;
+      --accent-text: #221B02;
+      --accent-bg: rgba(255, 230, 106, 0.28);
+
+      --success: #6FD8C7;
+      --success-bg: rgba(111, 216, 199, 0.16);
+      --success-text: #D9FFF4;
+      --warning: #EBCB67;
+      --warning-bg: rgba(235, 203, 103, 0.18);
+      --warning-text: #FFF3C8;
+      --error: #FF998F;
+      --error-bg: rgba(255, 153, 143, 0.16);
+      --error-text: #FFD4CE;
+      --info: #7BCBFF;
+      --info-bg: rgba(123, 203, 255, 0.16);
+      --info-text: #D7EEFF;
+    }
+
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      letter-spacing: 0.01em;
+      min-height: 100vh;
+      transition: background-color var(--duration-slow) var(--ease),
+                  color var(--duration-slow) var(--ease);
+    }
+
+    /* 字体层次 */
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text);
+    }
+
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+    h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
+    h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+    h4 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
+
+    p {
+      color: var(--text-secondary);
+      margin-bottom: var(--space-4);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 0.22em;
+      transition: color var(--duration) var(--ease);
+    }
+
+    a:hover {
+      color: var(--primary-hover);
+    }
+
+    /* 增强焦点轮廓 (Accessibility) */
+    :focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: var(--text);
+    }
+
+    /* ===== 容器 ===== */
+    .container {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 1280px;
+      padding: 0 24px;
+    }
+
+    /* ===== 导航栏 ===== */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-4) var(--space-6);
+      background: rgba(255, 253, 250, 0.48);
+      border-bottom: 1px solid rgba(153, 145, 136, 0.22);
+      backdrop-filter: blur(18px) saturate(145%);
+      -webkit-backdrop-filter: blur(18px) saturate(145%);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 8px 24px rgba(53, 50, 47, 0.05);
+    }
+
+    [data-theme="dark"] .navbar {
+      background: rgba(44, 37, 33, 0.42);
+      border-bottom-color: rgba(231, 221, 209, 0.12);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 1.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .navbar-brand-icon {
+      font-size: 1.5rem;
+    }
+
+    .navbar-menu {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      list-style: none;
+    }
+
+    .navbar-link {
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius);
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--text);
+      transition: all var(--duration) var(--ease);
+    }
+
+    .navbar-link:hover {
+      background: rgba(255, 255, 255, 0.28);
+    }
+
+    .navbar-link.active {
+      background: rgba(255, 255, 255, 0.34);
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    [data-theme="dark"] .navbar-link:hover {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    [data-theme="dark"] .navbar-link.active {
+      background: rgba(255, 255, 255, 0.10);
+    }
+
+    /* ===== Theme Toggle ===== */
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: var(--control-md);
+      height: var(--control-md);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.28);
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--duration) var(--ease);
+    }
+
+    [data-theme="dark"] .theme-toggle {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .theme-toggle:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+
+    .theme-toggle:active {
+      transform: translateY(1px);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .theme-toggle svg {
+      width: 20px;
+      height: 20px;
+      color: var(--text);
+    }
+
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    [data-theme="light"] .theme-toggle .icon-sun { display: none; }
+    [data-theme="light"] .theme-toggle .icon-moon { display: block; }
+
+    /* ===== Hero ===== */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: clamp(2.75rem, 6vw, 4rem);
+      font-weight: 900;
+      margin-bottom: var(--space-4);
+      letter-spacing: -0.04em;
+      line-height: 1.08;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+      line-height: 1.75;
+      max-width: 720px;
+      margin: 0 auto var(--space-6);
+      color: var(--text-secondary);
+    }
+
+    .hero-philosophy {
+      display: inline-block;
+      padding: var(--space-2) var(--space-4);
+      background: var(--accent);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #0D0D0D;
+      margin-bottom: var(--space-6);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: var(--space-4);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ===== Section ===== */
+    .section {
+      padding: 64px 0;
+      scroll-margin-top: 96px;
+    }
+
+    .section-header {
+      margin-bottom: var(--space-8);
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 3vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-2);
+    }
+
+    .section-subtitle {
+      color: var(--text-secondary);
+    }
+
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+      margin: var(--space-12) 0;
+    }
+
+    /* ===== Grid ===== */
+    .grid {
+      display: grid;
+      gap: var(--space-6);
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+    @media (max-width: 1024px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .foundation-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .grid-2, .grid-3, .grid-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .foundation-grid,
+      .foundation-item-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .foundation-item {
+        grid-template-columns: 1fr;
+        gap: var(--space-2);
+      }
+
+      .navbar {
+        padding: var(--space-4);
+      }
+
+      .navbar-menu {
+        gap: var(--space-2);
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+    }
+
+    /* ===== 按钮 ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      min-height: var(--control-md);
+      padding: 0 20px;
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1;
+      cursor: pointer;
+      white-space: nowrap;
+      user-select: none;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--duration) var(--ease);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #0D0D0D;
+    }
+
+    .btn-secondary {
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    .btn-accent {
+      background-color: var(--accent);
+      color: var(--accent-text);
+    }
+
+    .btn-success {
+      background-color: var(--success);
+      color: #0D0D0D;
+    }
+
+    .btn-error {
+      background-color: var(--error);
+      color: #0D0D0D;
+    }
+
+    .btn:disabled {
+      color: var(--text-muted);
+      background-color: var(--bg-secondary);
+      border-color: var(--text-muted);
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .btn-sm {
+      min-height: var(--control-sm);
+      padding: 0 16px;
+      font-size: 14px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-lg {
+      min-height: var(--control-lg);
+      padding: 0 28px;
+      font-size: 16px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* ===== 卡片 ===== */
+    .card {
+      background: var(--card);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      box-shadow: var(--shadow);
+      transition: all var(--duration) var(--ease);
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .card-flat {
+      box-shadow: none;
+    }
+
+    .card-flat:hover {
+      box-shadow: var(--shadow);
+    }
+
+    .card-header {
+      padding-bottom: var(--space-4);
+      margin-bottom: var(--space-4);
+      border-bottom: var(--border-width) solid var(--border-light);
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .card-subtitle {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-top: var(--space-2);
+    }
+
+    .card-body {
+      flex: 1;
+    }
+
+    .card-footer {
+      padding-top: var(--space-4);
+      margin-top: var(--space-4);
+      display: flex;
+      gap: var(--space-3);
+      justify-content: flex-end;
+      border-top: var(--border-width) solid var(--border-light);
+    }
+
+    /* ===== 表单 ===== */
+    .form-group {
+      margin-bottom: var(--space-4);
+    }
+
+    .label {
+      display: block;
+      margin-bottom: var(--space-2);
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .input {
+      width: 100%;
+      min-height: var(--control-md);
+      padding: 0 var(--space-4);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      background: var(--card);
+      color: var(--text);
+      box-shadow: var(--shadow-xs);
+      transition: all var(--duration) var(--ease);
+    }
+
+    .input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .input:hover {
+      border-color: var(--text-secondary);
+    }
+
+    .input:focus {
+      outline: none;
+      box-shadow: var(--shadow-sm);
+      border-color: var(--primary);
+    }
+
+    .input:disabled {
+      background: var(--bg-secondary);
+      color: var(--text-muted);
+      cursor: not-allowed;
+    }
+
+    .form-hint {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-top: var(--space-1);
+    }
+
+    textarea.input {
+      padding-top: var(--space-3);
+      padding-bottom: var(--space-3);
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    /* ===== Checkbox ===== */
+    .checkbox {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-3);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .checkbox-input {
+      display: none;
+    }
+
+    .checkbox-box {
+      width: 24px;
+      height: 24px;
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--duration) var(--ease);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .checkbox:hover .checkbox-box {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .checkbox-input:checked + .checkbox-box {
+      background: var(--primary);
+    }
+
+    .checkbox-input:checked + .checkbox-box::after {
+      content: '✓';
+      font-weight: 700;
+      font-size: 14px;
+      color: #0D0D0D;
+    }
+
+    .checkbox-label {
+      font-weight: 500;
+    }
+
+    /* ===== Radio ===== */
+    .radio {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-3);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .radio-input {
+      display: none;
+    }
+
+    .radio-circle {
+      width: 24px;
+      height: 24px;
+      border: var(--border-width) solid var(--border);
+      border-radius: 50%;
+      background: var(--card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--duration) var(--ease);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .radio:hover .radio-circle {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .radio-input:checked + .radio-circle {
+      background: var(--primary);
+    }
+
+    .radio-input:checked + .radio-circle::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: var(--text);
+      border-radius: 50%;
+      border: var(--border-width) solid var(--border);
+    }
+
+    .radio-label {
+      font-weight: 500;
+    }
+
+    /* ===== Toggle ===== */
+    .toggle {
+      position: relative;
+      display: inline-flex;
+      width: 48px;
+      height: 26px;
+      cursor: pointer;
+    }
+
+    .toggle-input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .toggle-slider {
+      position: absolute;
+      inset: 0;
+      background: var(--bg-secondary);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius-full);
+      transition: all var(--duration) var(--ease);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .toggle-slider::before {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      left: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--text);
+      border: var(--border-width) solid var(--border);
+      border-radius: 50%;
+      transition: all var(--duration) var(--ease);
+    }
+
+    .toggle-input:checked + .toggle-slider {
+      background: var(--primary);
+    }
+
+    .toggle-input:checked + .toggle-slider::before {
+      transform: translateY(-50%) translateX(22px);
+    }
+
+    /* ===== Badge ===== */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      padding: var(--space-1) var(--space-3);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: var(--card);
+      white-space: nowrap;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .badge-primary { background: var(--primary); color: #0D0D0D; }
+    .badge-accent  { background: var(--accent); color: #0D0D0D; }
+    .badge-success { background: var(--success); color: #0D0D0D; }
+    .badge-warning { background: var(--warning); color: #0D0D0D; }
+    .badge-error   { background: var(--error);   color: #0D0D0D; }
+
+    /* ===== Progress ===== */
+    .progress {
+      width: 100%;
+      height: 24px;
+      background: var(--bg-secondary);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: var(--primary);
+      border-right: var(--border-width) solid var(--border);
+      transition: width var(--duration-slow) var(--ease);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #0D0D0D;
+    }
+
+    .progress-bar.success { background: var(--success); }
+    .progress-bar.warning { background: var(--warning); }
+    .progress-bar.error { background: var(--error); }
+    .progress-bar.accent { background: var(--accent); }
+
+    /* ===== Alert ===== */
+    .alert {
+      padding: var(--space-4);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: var(--space-4);
+      color: var(--text);
+    }
+
+    .alert-icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .alert-content {
+      flex: 1;
+    }
+
+    .alert-title {
+      font-weight: 700;
+      margin-bottom: var(--space-1);
+    }
+
+    .alert-message {
+      font-size: 0.875rem;
+      color: inherit;
+      opacity: 0.88;
+    }
+
+    .alert-info {
+      background: var(--info-bg);
+      border-left: 4px solid var(--primary);
+      color: var(--info-text);
+    }
+
+    .alert-success {
+      background: var(--success-bg);
+      border-left: 4px solid var(--success-text);
+      color: var(--success-text);
+    }
+
+    .alert-warning {
+      background: var(--warning-bg);
+      border-left: 4px solid var(--warning-text);
+      color: var(--warning-text);
+    }
+
+    .alert-error {
+      background: var(--error-bg);
+      border-left: 4px solid var(--error-text);
+      color: var(--error-text);
+    }
+
+    /* ===== Avatar ===== */
+    .avatar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: var(--border-width) solid var(--border);
+      border-radius: 50%;
+      background: var(--primary);
+      font-weight: 700;
+      overflow: hidden;
+      box-shadow: var(--shadow-xs);
+      color: #0D0D0D;
+    }
+
+    .avatar-sm { width: 32px; height: 32px; font-size: 0.75rem; }
+    .avatar-md { width: 40px; height: 40px; font-size: 0.875rem; }
+    .avatar-lg { width: 56px; height: 56px; font-size: 1.25rem; }
+    .avatar-xl { width: 80px; height: 80px; font-size: 1.75rem; }
+
+    .avatar-group {
+      display: flex;
+    }
+
+    .avatar-group .avatar {
+      margin-left: -8px;
+      transition: transform var(--duration) var(--ease);
+    }
+
+    .avatar-group .avatar:first-child {
+      margin-left: 0;
+    }
+
+    .avatar-group .avatar:hover {
+      transform: translateY(-4px);
+      z-index: 10;
+    }
+
+    /* ===== Table ===== */
+    .table-wrapper {
+      overflow-x: auto;
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card);
+    }
+
+    .table th,
+    .table td {
+      padding: var(--space-3) var(--space-4);
+      text-align: left;
+      border-bottom: var(--border-width) solid var(--border-light);
+    }
+
+    .table th {
+      background: var(--bg-secondary);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+
+    .table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .table tr:hover td {
+      background: var(--bg-secondary);
+    }
+
+    /* ===== Accordion ===== */
+    .accordion {
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .accordion-item {
+      border-bottom: var(--border-width) solid var(--border);
+    }
+
+    .accordion-item:last-child {
+      border-bottom: none;
+    }
+
+    .accordion-header {
+      padding: var(--space-4);
+      background: var(--card);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 600;
+      transition: background var(--duration) var(--ease);
+    }
+
+    .accordion-header:hover {
+      background: var(--bg-secondary);
+    }
+
+    .accordion-icon {
+      transition: transform var(--duration) var(--ease);
+    }
+
+    .accordion-item.open .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--duration-slow) var(--ease);
+      background: var(--bg-secondary);
+    }
+
+    .accordion-item.open .accordion-content {
+      max-height: 500px;
+    }
+
+    .accordion-body {
+      padding: var(--space-4);
+      color: var(--text-secondary);
+    }
+
+    /* ===== Stats ===== */
+    .stat {
+      padding: var(--space-5);
+      background: var(--card);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-1);
+    }
+
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .stat-change {
+      font-size: 0.875rem;
+      margin-top: var(--space-1);
+    }
+
+    .stat-change.positive { color: var(--success-text); }
+    .stat-change.negative { color: var(--error-text); }
+
+    /* ===== Stepper ===== */
+    .stepper {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    .step-number {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: var(--border-width) solid var(--border);
+      border-radius: 50%;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      background: var(--card);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .step.active .step-number {
+      background: var(--primary);
+      color: #0D0D0D;
+    }
+
+    .step.completed .step-number {
+      background: var(--success);
+      color: #0D0D0D;
+    }
+
+    .step-label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .step.active .step-label,
+    .step.completed .step-label {
+      color: var(--text);
+    }
+
+    .step-connector {
+      flex: 1;
+      height: 2px;
+      background: var(--border);
+      min-width: 40px;
+    }
+
+    .step-connector.completed {
+      background: var(--success);
+    }
+
+    /* ===== Skeleton ===== */
+    .skeleton {
+      background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--card) 50%, var(--bg-secondary) 75%);
+      background-size: 200% 100%;
+      animation: skeletonLoading 1.5s ease-in-out infinite;
+      border-radius: var(--radius-sm);
+    }
+
+    @keyframes skeletonLoading {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    .skeleton-text { height: 1rem; margin-bottom: var(--space-2); }
+    .skeleton-title { height: 1.5rem; width: 60%; margin-bottom: var(--space-3); }
+    .skeleton-avatar { width: 48px; height: 48px; border-radius: 50%; }
+
+    /* ===== Spinner ===== */
+    .spinner {
+      width: 24px;
+      height: 24px;
+      border: 3px solid var(--border-light);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    .spinner-sm { width: 16px; height: 16px; border-width: 2px; }
+    .spinner-lg { width: 32px; height: 32px; border-width: 4px; }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ===== Tabs - 原研哉：简洁即复杂的解决 ===== */
+    .tabs {
+      display: flex;
+      border-bottom: var(--border-width) solid var(--border);
+      gap: 0;
+    }
+
+    .tab {
+      padding: var(--space-3) var(--space-5);
+      border: none;
+      background: transparent;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      position: relative;
+      transition: all var(--duration) var(--ease);
+    }
+
+    .tab:hover {
+      color: var(--text);
+      background: var(--bg-secondary);
+    }
+
+    .tab.active {
+      color: var(--text);
+    }
+
+    .tab.active::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--primary);
+    }
+
+    .tab-content {
+      padding: var(--space-5);
+      background: var(--card);
+      border: var(--border-width) solid var(--border);
+      border-top: none;
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+
+    /* ===== Tooltip - Rams：产品应该自我解释 ===== */
+    .tooltip-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip {
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      padding: var(--space-2) var(--space-3);
+      background: var(--text);
+      color: var(--bg);
+      font-size: 0.75rem;
+      font-weight: 500;
+      white-space: nowrap;
+      border-radius: var(--radius-sm);
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--duration) var(--ease);
+      z-index: 1000;
+    }
+
+    .tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: var(--text);
+    }
+
+    .tooltip-wrapper:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* ===== Modal - Ive：Calm Technology ===== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--duration) var(--ease);
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal {
+      background: var(--card);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl);
+      width: 100%;
+      max-width: 480px;
+      max-height: 90vh;
+      overflow: hidden;
+      transform: translateY(20px);
+      transition: transform var(--duration) var(--ease);
+    }
+
+    .modal-overlay.active .modal {
+      transform: translateY(0);
+    }
+
+    .modal-header {
+      padding: var(--space-5);
+      border-bottom: var(--border-width) solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .modal-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .modal-close {
+      width: 32px;
+      height: 32px;
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--bg-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      transition: all var(--duration) var(--ease);
+    }
+
+    .modal-close:hover {
+      background: var(--error);
+    }
+
+    .modal-body {
+      padding: var(--space-5);
+      overflow-y: auto;
+    }
+
+    .modal-footer {
+      padding: var(--space-4) var(--space-5);
+      border-top: var(--border-width) solid var(--border-light);
+      display: flex;
+      gap: var(--space-3);
+      justify-content: flex-end;
+    }
+
+    /* ===== Breadcrumb - 清晰的导航层次 ===== */
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 0.875rem;
+    }
+
+    .breadcrumb-item {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color var(--duration) var(--ease);
+    }
+
+    .breadcrumb-item:hover {
+      color: var(--primary);
+    }
+
+    .breadcrumb-item.active {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .breadcrumb-separator {
+      color: var(--text-muted);
+    }
+
+    /* ===== Pagination - 8pt Grid 的数学和谐 ===== */
+    .pagination {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .page-btn {
+      min-width: var(--control-md);
+      height: var(--control-md);
+      padding: 0 var(--space-3);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius);
+      background: var(--card);
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--duration) var(--ease);
+    }
+
+    .page-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+
+    .page-btn:active {
+      transform: translateY(1px);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .page-btn.active {
+      background: var(--primary);
+      color: #0D0D0D;
+    }
+
+    .page-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    /* ===== Dropdown - 微妙的深度表达 ===== */
+    .dropdown {
+      position: relative;
+      display: inline-flex;
+      flex-direction: column;
+    }
+
+    .dropdown-trigger {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-3);
+      min-height: var(--control-md);
+      padding: 0 var(--space-4);
+      min-width: 160px;
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius);
+      background: var(--card);
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--duration) var(--ease);
+    }
+
+    .dropdown-trigger:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-1px);
+    }
+
+    .dropdown-trigger:active {
+      transform: translateY(1px);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .dropdown-trigger svg {
+      flex-shrink: 0;
+      transition: transform var(--duration) var(--ease);
+    }
+
+    .dropdown.open .dropdown-trigger svg {
+      transform: rotate(180deg);
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      right: 0;
+      min-width: 100%;
+      background: var(--card);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-8px);
+      transition: all var(--duration) var(--ease);
+      z-index: 100;
+      overflow: hidden;
+    }
+
+    .dropdown.open .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-item {
+      padding: var(--space-3) var(--space-4);
+      font-size: 0.875rem;
+      color: var(--text);
+      cursor: pointer;
+      transition: all var(--duration) var(--ease);
+      border-bottom: 1px solid var(--border-light);
+      white-space: nowrap;
+    }
+
+    .dropdown-item:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-item:hover {
+      background: var(--bg-secondary);
+    }
+
+    .dropdown-item.active {
+      background: var(--accent-bg);
+      color: var(--accent-text);
+      font-weight: 600;
+    }
+
+    .dropdown-item.active:hover {
+      background: var(--accent-bg);
+    }
+
+    /* ===== Tag Input - 有目的的交互 ===== */
+    .tag-input-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      padding: var(--space-3);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: var(--shadow-sm);
+      min-height: 48px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-1) var(--space-3);
+      background: var(--accent-bg);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .tag-remove {
+      width: 16px;
+      height: 16px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity var(--duration) var(--ease);
+    }
+
+    .tag-remove:hover {
+      opacity: 1;
+    }
+
+    /* ===== Timeline - 叙事的节奏 ===== */
+    .timeline {
+      position: relative;
+      padding-left: var(--space-8);
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 11px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: var(--space-6);
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: calc(-1 * var(--space-8) + 4px);
+      width: 16px;
+      height: 16px;
+      background: var(--card);
+      border: var(--border-width) solid var(--border);
+      border-radius: 50%;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .timeline-item.active .timeline-dot {
+      background: var(--primary);
+    }
+
+    .timeline-item.completed .timeline-dot {
+      background: var(--success);
+    }
+
+    .timeline-content {
+      background: var(--card);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius);
+      padding: var(--space-4);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      margin-bottom: var(--space-1);
+    }
+
+    .timeline-time {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== Divider - 留白的边界 ===== */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      margin: var(--space-6) 0;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: var(--border-light);
+    }
+
+    .divider-text {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ===== Empty State - 空的可能性 ===== */
+    .empty-state {
+      text-align: center;
+      padding: var(--space-12) var(--space-6);
+      background: var(--card);
+      border: var(--border-width) dashed var(--border);
+      border-radius: var(--radius-lg);
+    }
+
+    .empty-state-icon {
+      font-size: 3rem;
+      margin-bottom: var(--space-4);
+      opacity: 0.5;
+    }
+
+    .empty-state-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: var(--space-2);
+    }
+
+    .empty-state-desc {
+      color: var(--text-secondary);
+      margin-bottom: var(--space-5);
+    }
+
+    /* ===== List - 清晰的信息层次 ===== */
+    .list {
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .list-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      padding: var(--space-4);
+      background: var(--card);
+      border-bottom: var(--border-width) solid var(--border-light);
+      transition: background var(--duration) var(--ease);
+    }
+
+    .list-item:last-child {
+      border-bottom: none;
+    }
+
+    .list-item:hover {
+      background: var(--bg-secondary);
+    }
+
+    .list-item-icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-secondary);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius);
+      font-size: 1.25rem;
+    }
+
+    .list-item-content {
+      flex: 1;
+    }
+
+    .list-item-title {
+      font-weight: 600;
+      margin-bottom: var(--space-1);
+    }
+
+    .list-item-desc {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .list-item-action {
+      color: var(--text-muted);
+    }
+
+    /* ===== Code Block - 诚实的技术表达 ===== */
+    .code-block {
+      background: #1E1E1E;
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-3) var(--space-4);
+      background: #2D2D2D;
+      border-bottom: 1px solid #3D3D3D;
+    }
+
+    .code-lang {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #888;
+      text-transform: uppercase;
+    }
+
+    .code-copy {
+      padding: var(--space-1) var(--space-3);
+      border: 1px solid #555;
+      border-radius: var(--radius-sm);
+      background: transparent;
+      color: #888;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all var(--duration) var(--ease);
+    }
+
+    .code-copy:hover {
+      background: #3D3D3D;
+      color: #FFF;
+    }
+
+    .code-content {
+      padding: var(--space-4);
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: #D4D4D4;
+      overflow-x: auto;
+    }
+
+    .code-content .keyword { color: #569CD6; }
+    .code-content .string { color: #CE9178; }
+    .code-content .comment { color: #6A9955; }
+    .code-content .function { color: #DCDCAA; }
+
+    /* ===== Notification Dot - 微妙的提示 ===== */
+    .notification-dot {
+      position: relative;
+    }
+
+    .notification-dot::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      width: 10px;
+      height: 10px;
+      background: var(--error);
+      border: 2px solid var(--card);
+      border-radius: 50%;
+    }
+
+    /* ===== Utilities ===== */
+    .flex { display: flex; }
+    .flex-col { flex-direction: column; }
+    .flex-wrap { flex-wrap: wrap; }
+    .items-center { align-items: center; }
+    .items-start { align-items: flex-start; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .gap-2 { gap: var(--space-2); }
+    .gap-3 { gap: var(--space-3); }
+    .gap-4 { gap: var(--space-4); }
+    .gap-6 { gap: var(--space-6); }
+    .gap-8 { gap: var(--space-8); }
+    .text-center { text-align: center; }
+    .text-sm { font-size: 0.875rem; }
+    .text-xs { font-size: 0.75rem; }
+    .text-muted { color: var(--text-secondary); }
+    .font-bold { font-weight: 700; }
+    .font-mono { font-family: var(--font-mono); }
+    .mt-2 { margin-top: var(--space-2); }
+    .mt-4 { margin-top: var(--space-4); }
+    .mt-6 { margin-top: var(--space-6); }
+    .mb-2 { margin-bottom: var(--space-2); }
+    .mb-4 { margin-bottom: var(--space-4); }
+    .mb-6 { margin-bottom: var(--space-6); }
+    .w-full { width: 100%; }
+
+    /* ===== Showcase ===== */
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: var(--space-6);
+    }
+
+    .showcase-item {
+      padding: var(--space-6);
+      background: var(--card);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .showcase-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-4);
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: 6px 10px;
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius-full);
+      background: var(--bg-secondary);
+      box-shadow: var(--shadow-xs);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: var(--space-3);
+    }
+
+    .foundation-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-6);
+    }
+
+    .foundation-card {
+      padding: var(--space-6);
+      background: var(--card);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .foundation-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: var(--space-2);
+    }
+
+    .foundation-desc {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-bottom: var(--space-4);
+    }
+
+    .foundation-list {
+      display: grid;
+      gap: var(--space-3);
+    }
+
+    .foundation-item {
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: var(--space-4);
+      padding-top: var(--space-3);
+      border-top: var(--border-width) solid var(--border-light);
+    }
+
+    .foundation-item:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .foundation-token {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .foundation-note {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* ===== Philosophy Section ===== */
+    .philosophy-card {
+      padding: var(--space-6);
+      background: var(--card);
+      border: var(--border-width) solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .philosophy-author {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-2);
+    }
+
+    .philosophy-quote {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text);
+      font-style: italic;
+      margin-bottom: var(--space-3);
+    }
+
+    .philosophy-desc {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      padding: var(--space-10) 0;
+      text-align: center;
+      border-top: var(--border-width) solid var(--border);
+      margin-top: var(--space-16);
+    }
+
+    .footer-text {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#" class="navbar-brand">
+      <span class="navbar-brand-icon">🍊</span>
+      Orange UI
+    </a>
+    <ul class="navbar-menu">
+      <li><a href="#philosophy" class="navbar-link">哲学</a></li>
+      <li><a href="#foundations" class="navbar-link">基础</a></li>
+      <li><a href="#components" class="navbar-link">核心</a></li>
+      <li><a href="#patterns" class="navbar-link">模式</a></li>
+      <li><a href="#feedback" class="navbar-link">反馈</a></li>
+      <li>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-philosophy">Color with purpose, not decoration</div>
+      <h1 class="hero-title">有目的的设计</h1>
+      <p class="hero-subtitle">
+        融合 Dieter Rams、原研哉与 Jony Ive 的设计智慧。Neo-Brutalist 风格，颜色服务于功能，而非仅仅装饰。
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-lg">开始使用</button>
+        <button class="btn btn-secondary btn-lg">查看文档</button>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="section">
+      <div class="section-header">
+        <div class="section-kicker">Principles</div>
+        <h2 class="section-title">设计哲学</h2>
+        <p class="section-subtitle">作为 Orange UI 整个设计系统的上位原则，而不是某个页面的装饰说明</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="philosophy-card">
+          <div class="philosophy-author">Dieter Rams</div>
+          <div class="philosophy-quote">"Weniger, aber besser"</div>
+          <p class="philosophy-desc">少即是多，但要更好。好的设计是尽可能少的设计，专注于本质，去除一切不必要的元素。</p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-author">原研哉 Kenya Hara</div>
+          <div class="philosophy-quote">"白是一种追求，不是颜色"</div>
+          <p class="philosophy-desc">空 (Emptiness) — 留白不是空无，而是充满可能性的容器。设计应该唤起感知，而非仅仅传递信息。</p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-author">Jony Ive</div>
+          <div class="philosophy-quote">"Inevitable design"</div>
+          <p class="philosophy-desc">设计应该看起来"理所当然"，如同它本该如此。对精度的极致追求，通过微妙变化创造深度。</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Foundations Section -->
+    <section id="foundations" class="section">
+      <div class="section-header">
+        <div class="section-kicker">Foundations</div>
+        <h2 class="section-title">系统基础</h2>
+        <p class="section-subtitle">把上位原则转成颜色、层级、比例和交互的可执行规则</p>
+      </div>
+
+      <div class="foundation-grid">
+        <div class="foundation-card">
+          <div class="foundation-title">颜色语义</div>
+          <p class="foundation-desc">颜色先表达职责，再表达情绪。Orange UI 尽量减少色相数量，再用同色系的明暗与透明度建立层级。</p>
+          <div class="foundation-list">
+            <div class="foundation-item">
+              <div class="foundation-token">primary</div>
+              <p class="foundation-note">只用于主行动、激活态和系统主焦点。</p>
+            </div>
+            <div class="foundation-item">
+              <div class="foundation-token">accent</div>
+              <p class="foundation-note">用于辅助强调、标签高亮和非危险性的视觉提点。</p>
+            </div>
+            <div class="foundation-item">
+              <div class="foundation-token">info / warning / success / error</div>
+              <p class="foundation-note">蓝复用主操作色相，warning 与 accent 共享黄系，但通过深浅和对比度区分职责。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="foundation-card">
+          <div class="foundation-title">结构强度</div>
+          <p class="foundation-desc">Neo-Brutalist 的诚实不等于每个组件都同样强硬，而是让重要程度有清楚档位。</p>
+          <div class="foundation-list">
+            <div class="foundation-item">
+              <div class="foundation-token">shadow-xs / sm</div>
+              <p class="foundation-note">用于输入框、标签、小型控件和辅助容器。</p>
+            </div>
+            <div class="foundation-item">
+              <div class="foundation-token">shadow / lg</div>
+              <p class="foundation-note">用于核心卡片、主按钮、反馈容器和浮层。</p>
+            </div>
+            <div class="foundation-item">
+              <div class="foundation-token">shadow-xl</div>
+              <p class="foundation-note">只留给模态框等更高层级的叠加界面。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="foundation-card">
+          <div class="foundation-title">比例纪律</div>
+          <p class="foundation-desc">系统感来自可预测的比例，而不是组件数量。按钮、输入、分页和下拉共用同一套控制尺寸。</p>
+          <div class="foundation-list">
+            <div class="foundation-item">
+              <div class="foundation-token">36 / 44 / 52</div>
+              <p class="foundation-note">分别对应 small、default、large 控件高度。</p>
+            </div>
+            <div class="foundation-item">
+              <div class="foundation-token">2 / 4 / 8</div>
+              <p class="foundation-note">圆角档位保持极少，避免每个组件都自成一套比例。</p>
+            </div>
+            <div class="foundation-item">
+              <div class="foundation-token">8pt spacing</div>
+              <p class="foundation-note">继续作为模块与组件的主节奏，不随内容随意漂移。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="foundation-card">
+          <div class="foundation-title">交互语法</div>
+          <p class="foundation-desc">交互反馈应该诚实、可预期、低惊扰，优先表达状态变化，而不是卖弄动效。</p>
+          <div class="foundation-list">
+            <div class="foundation-item">
+              <div class="foundation-token">hover</div>
+              <p class="foundation-note">主控件统一轻微上浮，字段类组件则只强化边界与焦点。</p>
+            </div>
+            <div class="foundation-item">
+              <div class="foundation-token">active</div>
+              <p class="foundation-note">统一使用轻微压下感，而不是缩放或夸张跳动。</p>
+            </div>
+            <div class="foundation-item">
+              <div class="foundation-token">focus / disabled</div>
+              <p class="foundation-note">焦点清楚、禁用安静，永远不制造可点击的错觉。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Buttons Section -->
+    <section id="components" class="section">
+      <div class="section-header">
+        <div class="section-kicker">Core</div>
+        <h2 class="section-title">按钮</h2>
+        <p class="section-subtitle">主动作、次动作与辅助强调的系统分工</p>
+      </div>
+
+      <div class="showcase-grid">
+        <div class="showcase-item">
+          <div class="showcase-title">变体</div>
+          <div class="flex gap-3" style="flex-wrap: wrap;">
+            <button class="btn btn-primary">主要</button>
+            <button class="btn btn-secondary">次要</button>
+            <button class="btn btn-accent">辅助强调</button>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-title">语义</div>
+          <div class="flex gap-3" style="flex-wrap: wrap;">
+            <button class="btn btn-success">成功</button>
+            <button class="btn btn-error">错误</button>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-title">尺寸</div>
+          <div class="flex gap-3 items-center" style="flex-wrap: wrap;">
+            <button class="btn btn-primary btn-sm">小</button>
+            <button class="btn btn-primary">默认</button>
+            <button class="btn btn-primary btn-lg">大</button>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-title">状态</div>
+          <div class="flex gap-3" style="flex-wrap: wrap;">
+            <button class="btn btn-primary">正常</button>
+            <button class="btn btn-primary" disabled>禁用</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Cards Section -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-kicker">Core</div>
+        <h2 class="section-title">卡片</h2>
+        <p class="section-subtitle">容器负责边界、层次与内容节奏，而不只是视觉装饰</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">粗犷卡片</h3>
+            <p class="card-subtitle">Neo-Brutalist 风格</p>
+          </div>
+          <div class="card-body">
+            <p class="text-sm text-muted">硬阴影与粗边框，诚实地表达结构深度。</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-sm btn-secondary">取消</button>
+            <button class="btn btn-sm btn-primary">确认</button>
+          </div>
+        </div>
+
+        <div class="card card-flat">
+          <div class="card-header">
+            <h3 class="card-title">扁平卡片</h3>
+            <p class="card-subtitle">更加克制</p>
+          </div>
+          <div class="card-body">
+            <p class="text-sm text-muted">去除默认阴影，悬停时显示，体现微妙变化。</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-sm btn-accent">了解更多</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">功能卡片</h3>
+            <p class="card-subtitle">带徽章</p>
+          </div>
+          <div class="card-body">
+            <span class="badge badge-primary">新功能</span>
+            <p class="text-sm text-muted mt-4">使用徽章突出重要信息。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Forms Section -->
+    <section id="forms" class="section">
+      <div class="section-header">
+        <div class="section-kicker">Core</div>
+        <h2 class="section-title">表单元素</h2>
+        <p class="section-subtitle">统一的尺寸、边界和反馈语法</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="showcase-item">
+          <div class="showcase-title">文本输入</div>
+          <div class="form-group">
+            <label class="label">邮箱地址</label>
+            <input type="email" class="input" placeholder="you@example.com">
+            <p class="form-hint">我们不会分享您的邮箱</p>
+          </div>
+          <div class="form-group">
+            <label class="label">留言</label>
+            <textarea class="input" placeholder="请输入您的留言..."></textarea>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-title">选择控件</div>
+          <div class="flex flex-col gap-4">
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox-input" checked>
+              <span class="checkbox-box"></span>
+              <span class="checkbox-label">同意条款和条件</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox-input">
+              <span class="checkbox-box"></span>
+              <span class="checkbox-label">订阅新闻通讯</span>
+            </label>
+            <div style="height: 1px; background: var(--border-light); margin: var(--space-2) 0;"></div>
+            <label class="radio">
+              <input type="radio" name="plan" class="radio-input" checked>
+              <span class="radio-circle"></span>
+              <span class="radio-label">免费版</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="plan" class="radio-input">
+              <span class="radio-circle"></span>
+              <span class="radio-label">专业版</span>
+            </label>
+            <div style="height: 1px; background: var(--border-light); margin: var(--space-2) 0;"></div>
+            <div class="flex items-center gap-3">
+              <label class="toggle">
+                <input type="checkbox" class="toggle-input" checked>
+                <span class="toggle-slider"></span>
+              </label>
+              <span class="text-sm">深色模式</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Data Display Section -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-kicker">Content</div>
+        <h2 class="section-title">数据展示</h2>
+        <p class="section-subtitle">信息表达遵循同一套语义和层级规则</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="showcase-item">
+          <div class="showcase-title">徽章</div>
+          <div class="flex gap-3" style="flex-wrap: wrap;">
+            <span class="badge">默认</span>
+            <span class="badge badge-primary">主要</span>
+            <span class="badge badge-accent">高亮</span>
+            <span class="badge badge-success">成功</span>
+            <span class="badge badge-warning">警告</span>
+            <span class="badge badge-error">错误</span>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-title">头像</div>
+          <div class="avatar-group">
+            <div class="avatar avatar-md">张</div>
+            <div class="avatar avatar-md" style="background: var(--accent);">李</div>
+            <div class="avatar avatar-md" style="background: var(--success);">王</div>
+            <div class="avatar avatar-md" style="background: var(--info);">+3</div>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-title">进度条</div>
+          <div class="flex flex-col gap-4">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-sm font-bold">主色</span>
+                <span class="text-sm text-muted">65%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" style="width: 65%">65%</div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-sm font-bold">成功</span>
+                <span class="text-sm text-muted">100%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar success" style="width: 100%">100%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-title">加载</div>
+          <div class="flex gap-6 items-center">
+            <div class="spinner spinner-sm"></div>
+            <div class="spinner"></div>
+            <div class="spinner spinner-lg"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Feedback Section -->
+    <section id="feedback" class="section">
+      <div class="section-header">
+        <div class="section-kicker">Feedback</div>
+        <h2 class="section-title">反馈</h2>
+        <p class="section-subtitle">语义颜色优先于装饰颜色</p>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <div class="alert alert-info">
+          <span class="alert-icon">ℹ</span>
+          <div class="alert-content">
+            <div class="alert-title">信息提示</div>
+            <p class="alert-message">这是一条中性的信息提示消息。</p>
+          </div>
+        </div>
+
+        <div class="alert alert-success">
+          <span class="alert-icon">✓</span>
+          <div class="alert-content">
+            <div class="alert-title">操作成功</div>
+            <p class="alert-message">您的更改已成功保存。</p>
+          </div>
+        </div>
+
+        <div class="alert alert-warning">
+          <span class="alert-icon">⚠</span>
+          <div class="alert-content">
+            <div class="alert-title">请注意</div>
+            <p class="alert-message">此操作可能需要额外的验证。</p>
+          </div>
+        </div>
+
+        <div class="alert alert-error">
+          <span class="alert-icon">✕</span>
+          <div class="alert-content">
+            <div class="alert-title">发生错误</div>
+            <p class="alert-message">无法完成请求，请稍后重试。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Stats Section -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-kicker">Content</div>
+        <h2 class="section-title">统计数据</h2>
+        <p class="section-subtitle">通过统一比例和色彩强度呈现关键指标</p>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="stat">
+          <div class="stat-label">总用户</div>
+          <div class="stat-value">12,847</div>
+          <div class="stat-change positive">↑ 较上月增长 12%</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">收入</div>
+          <div class="stat-value">¥48.2万</div>
+          <div class="stat-change positive">↑ 较上月增长 8.1%</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">当前在线</div>
+          <div class="stat-value">573</div>
+          <div class="stat-change">实时</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">跳出率</div>
+          <div class="stat-value">24.5%</div>
+          <div class="stat-change negative">↓ 较上月下降 3.2%</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Accordion Section -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-kicker">Pattern</div>
+        <h2 class="section-title">手风琴</h2>
+        <p class="section-subtitle">建立在同一套边界、层级和交互语法上的组合模式</p>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-item open">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span>什么是 Orange UI 的设计哲学？</span>
+            <span class="accordion-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              Orange UI 融合了三位大师的设计智慧：Dieter Rams 的"少即是多"、原研哉的"白之美学"、以及 Jony Ive 的"理所当然的设计"。我们相信颜色应该服务于功能，而非仅仅装饰。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span>为什么选择 Neo-Brutalist 风格？</span>
+            <span class="accordion-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              Neo-Brutalist 风格通过硬阴影和粗边框诚实地表达结构。正如 Dieter Rams 所说："好的设计是诚实的"——不夸大功能，不隐藏真实。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span>颜色系统的设计理念是什么？</span>
+            <span class="accordion-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </span>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              我们的调色板使用温暖的奶油米白背景，搭配天蓝主色与柔黄辅助强调色。warning 不再额外引入新色相，而是在同一黄系里通过更深层级承担注意语义；信息继续复用主蓝。颜色服务于功能，也服务于整体视觉的舒适度。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Navigation Components Section -->
+    <section id="patterns" class="section">
+      <div class="section-header">
+        <div class="section-kicker">Pattern</div>
+        <h2 class="section-title">导航组件</h2>
+        <p class="section-subtitle">Rams: 好的设计使产品易于理解 - 用清晰规则组织复杂操作</p>
+      </div>
+
+      <div class="showcase-grid">
+        <div class="showcase-item">
+          <div class="showcase-title">面包屑导航</div>
+          <nav class="breadcrumb">
+            <a href="#" class="breadcrumb-item">首页</a>
+            <span class="breadcrumb-separator">/</span>
+            <a href="#" class="breadcrumb-item">产品</a>
+            <span class="breadcrumb-separator">/</span>
+            <a href="#" class="breadcrumb-item">设计系统</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-item active">Orange UI</span>
+          </nav>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-title">分页</div>
+          <div class="pagination">
+            <button class="page-btn" disabled>&lt;</button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">...</button>
+            <button class="page-btn">12</button>
+            <button class="page-btn">&gt;</button>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-title">标签页</div>
+          <div class="tabs">
+            <button class="tab active">概览</button>
+            <button class="tab">文档</button>
+            <button class="tab">示例</button>
+            <button class="tab">更新日志</button>
+          </div>
+          <div class="tab-content">
+            <p class="text-sm text-muted" style="margin: 0;">标签页内容区域 - 简洁即复杂的解决</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-title">下拉菜单</div>
+          <div class="dropdown open">
+            <button class="dropdown-trigger">
+              选择选项
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="dropdown-menu">
+              <div class="dropdown-item active">选项一</div>
+              <div class="dropdown-item">选项二</div>
+              <div class="dropdown-item">选项三</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Interactive Components Section -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-kicker">Pattern</div>
+        <h2 class="section-title">交互组件</h2>
+        <p class="section-subtitle">Ive: 通过克制、统一的反馈创造深度</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="showcase-item">
+          <div class="showcase-title">工具提示</div>
+          <div class="flex gap-6">
+            <div class="tooltip-wrapper">
+              <button class="btn btn-secondary btn-sm">悬停查看</button>
+              <div class="tooltip">这是一条提示信息</div>
+            </div>
+            <div class="tooltip-wrapper">
+              <span class="badge badge-primary notification-dot">消息</span>
+              <div class="tooltip">3 条未读消息</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-title">标签输入</div>
+          <div class="tag-input-wrapper">
+            <span class="tag">设计 <button class="tag-remove">×</button></span>
+            <span class="tag">极简 <button class="tag-remove">×</button></span>
+            <span class="tag">功能 <button class="tag-remove">×</button></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Timeline Section -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-kicker">Content</div>
+        <h2 class="section-title">时间线</h2>
+        <p class="section-subtitle">原研哉: 设计应该唤起感知 - 让内容模式也保持系统节奏</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="showcase-item">
+          <div class="showcase-title">项目进度</div>
+          <div class="timeline">
+            <div class="timeline-item completed">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-title">需求分析</div>
+                <div class="timeline-time">2024年1月15日</div>
+              </div>
+            </div>
+            <div class="timeline-item completed">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-title">设计系统建立</div>
+                <div class="timeline-time">2024年2月20日</div>
+              </div>
+            </div>
+            <div class="timeline-item active">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-title">组件开发中</div>
+                <div class="timeline-time">进行中</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-title">测试与发布</div>
+                <div class="timeline-time">待开始</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-title">列表组件</div>
+          <div class="list">
+            <div class="list-item">
+              <div class="list-item-icon">📁</div>
+              <div class="list-item-content">
+                <div class="list-item-title">设计文档</div>
+                <div class="list-item-desc">包含所有设计规范</div>
+              </div>
+              <span class="list-item-action">→</span>
+            </div>
+            <div class="list-item">
+              <div class="list-item-icon">🎨</div>
+              <div class="list-item-content">
+                <div class="list-item-title">色彩系统</div>
+                <div class="list-item-desc">有目的的颜色</div>
+              </div>
+              <span class="list-item-action">→</span>
+            </div>
+            <div class="list-item">
+              <div class="list-item-icon">📐</div>
+              <div class="list-item-content">
+                <div class="list-item-title">间距规范</div>
+                <div class="list-item-desc">8pt 网格系统</div>
+              </div>
+              <span class="list-item-action">→</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Code & Empty State Section -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-kicker">Content</div>
+        <h2 class="section-title">代码与状态</h2>
+        <p class="section-subtitle">Rams: 好的设计是诚实的 - 内容模式也应清楚、直接、不伪装</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="showcase-item">
+          <div class="showcase-title">代码块</div>
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-lang">JavaScript</span>
+              <button class="code-copy">复制</button>
+            </div>
+            <div class="code-content">
+<span class="comment">// Orange UI 设计哲学</span>
+<span class="keyword">const</span> <span class="function">design</span> = {
+  rams: <span class="string">"少即是多"</span>,
+  hara: <span class="string">"空之美学"</span>,
+  ive: <span class="string">"理所当然"</span>
+};
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-title">空状态</div>
+          <div class="empty-state">
+            <div class="empty-state-icon">📭</div>
+            <h4 class="empty-state-title">暂无内容</h4>
+            <p class="empty-state-desc">空不是虚无，而是充满可能性的容器</p>
+            <button class="btn btn-primary btn-sm">开始创建</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Divider Section -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-kicker">Content</div>
+        <h2 class="section-title">分割与留白</h2>
+        <p class="section-subtitle">原研哉: 留白不是空无，而是接纳一切可能性的器皿</p>
+      </div>
+
+      <div class="showcase-item">
+        <div class="showcase-title">带文字分割线</div>
+        <p class="text-sm text-muted">上方内容区域</p>
+        <div class="divider">
+          <span class="divider-text">或者</span>
+        </div>
+        <p class="text-sm text-muted">下方内容区域</p>
+        <div class="divider">
+          <span class="divider-text">继续</span>
+        </div>
+        <p class="text-sm text-muted">更多内容...</p>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Modal Preview Section -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-kicker">Pattern</div>
+        <h2 class="section-title">模态框</h2>
+        <p class="section-subtitle">Ive: Calm Technology - 高层级容器也要保持克制和清楚</p>
+      </div>
+
+      <div class="showcase-item">
+        <div class="showcase-title">模态框预览 (静态展示)</div>
+        <div style="position: relative; background: rgba(0,0,0,0.3); padding: var(--space-8); border-radius: var(--radius-lg);">
+          <div class="modal" style="position: relative; transform: none; margin: 0 auto;">
+            <div class="modal-header">
+              <h3 class="modal-title">确认操作</h3>
+              <button class="modal-close">×</button>
+            </div>
+            <div class="modal-body">
+              <p class="text-sm text-muted" style="margin: 0;">您确定要执行此操作吗？此操作不可撤销。</p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary btn-sm">取消</button>
+              <button class="btn btn-primary btn-sm">确认</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Stepper Section -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-kicker">Pattern</div>
+        <h2 class="section-title">步骤指示器</h2>
+        <p class="section-subtitle">以统一的比例和状态语义引导多步骤流程</p>
+      </div>
+
+      <div class="stepper">
+        <div class="step completed">
+          <div class="step-number">✓</div>
+          <span class="step-label">账户</span>
+        </div>
+        <div class="step-connector completed"></div>
+        <div class="step active">
+          <div class="step-number">2</div>
+          <span class="step-label">资料</span>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <span class="step-label">审核</span>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <span class="step-label">完成</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer-text">
+        Orange UI — 融合 Dieter Rams、原研哉、Jony Ive 的设计智慧<br>
+        <em>"Less, but better. 少即是多，但要更好。"</em>
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    // Theme Toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    // Navbar Active State
+    const navLinks = Array.from(document.querySelectorAll('.navbar-link[href^="#"]'));
+    const observedSections = navLinks
+      .map(link => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    if (navLinks.length && observedSections.length) {
+      const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+
+          const currentHash = '#' + entry.target.id;
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === currentHash);
+          });
+        });
+      }, {
+        rootMargin: '-32% 0px -56% 0px',
+        threshold: 0
+      });
+
+      observedSections.forEach(section => navObserver.observe(section));
+    }
+
+    // Accordion Toggle
+    function toggleAccordion(header) {
+      const item = header.parentElement;
+      const wasOpen = item.classList.contains('open');
+
+      document.querySelectorAll('.accordion-item').forEach(i => {
+        i.classList.remove('open');
+      });
+
+      if (!wasOpen) {
+        item.classList.add('open');
+      }
+    }
+
+    // Dropdown Toggle
+    document.querySelectorAll('.dropdown-trigger').forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const dropdown = trigger.closest('.dropdown');
+        const wasOpen = dropdown.classList.contains('open');
+
+        // 关闭所有下拉菜单
+        document.querySelectorAll('.dropdown').forEach(d => {
+          d.classList.remove('open');
+        });
+
+        // 切换当前下拉菜单
+        if (!wasOpen) {
+          dropdown.classList.add('open');
+        }
+      });
+    });
+
+    // Dropdown Item Selection
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const dropdown = item.closest('.dropdown');
+        const trigger = dropdown.querySelector('.dropdown-trigger');
+        const triggerText = trigger.childNodes[0];
+
+        // 更新选中状态
+        dropdown.querySelectorAll('.dropdown-item').forEach(i => {
+          i.classList.remove('active');
+        });
+        item.classList.add('active');
+
+        // 更新触发按钮文字
+        triggerText.textContent = item.textContent + ' ';
+
+        // 关闭下拉菜单
+        dropdown.classList.remove('open');
+      });
+    });
+
+    // 点击外部关闭下拉菜单
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.dropdown').forEach(d => {
+        d.classList.remove('open');
+      });
+    });
+
+    // Tabs Toggle
+    document.querySelectorAll('.tabs').forEach(tabsContainer => {
+      const tabs = tabsContainer.querySelectorAll('.tab');
+      const tabContent = tabsContainer.nextElementSibling;
+
+      const tabContents = [
+        '概览内容 - 这是 Orange UI 设计系统的概览，融合三位大师的设计智慧。',
+        '文档内容 - 详细的组件文档和使用指南，遵循"少即是多"的原则。',
+        '示例内容 - 丰富的代码示例，展示每个组件的最佳实践。',
+        '更新日志 - 版本历史和更新记录，持续改进的设计演进。'
+      ];
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+          // 移除所有 active 状态
+          tabs.forEach(t => t.classList.remove('active'));
+          // 添加当前 active 状态
+          tab.classList.add('active');
+          // 更新内容
+          if (tabContent && tabContent.classList.contains('tab-content')) {
+            tabContent.innerHTML = '<p class="text-sm text-muted" style="margin: 0;">' + tabContents[index] + '</p>';
+          }
+        });
+      });
+    });
+
+    // Tag Remove
+    document.querySelectorAll('.tag-remove').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tag = btn.closest('.tag');
+        tag.style.transform = 'scale(0.8)';
+        tag.style.opacity = '0';
+        setTimeout(() => {
+          tag.remove();
+        }, 150);
+      });
+    });
+
+    // Tooltip positioning (确保不超出视口)
+    document.querySelectorAll('.tooltip-wrapper').forEach(wrapper => {
+      wrapper.addEventListener('mouseenter', () => {
+        const tooltip = wrapper.querySelector('.tooltip');
+        if (tooltip) {
+          const rect = tooltip.getBoundingClientRect();
+          if (rect.left < 0) {
+            tooltip.style.left = '0';
+            tooltip.style.transform = 'translateX(0)';
+          }
+          if (rect.right > window.innerWidth) {
+            tooltip.style.left = 'auto';
+            tooltip.style.right = '0';
+            tooltip.style.transform = 'translateX(0)';
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
