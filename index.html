@@ -172,6 +172,27 @@
             box-shadow: none;
         }
 
+        .header-action {
+            background: var(--card);
+            border: var(--border-width) solid var(--border);
+            color: var(--text);
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all var(--duration) var(--ease);
+            box-shadow: var(--shadow-xs);
+        }
+
+        .header-action:active {
+            transform: translateY(1px);
+            box-shadow: none;
+        }
+
         /* Pages */
         .page {
             display: none;
@@ -1090,7 +1111,9 @@
                     <div class="header-title" id="headerTitle">
                         <span>✈️</span> 翼语通
                     </div>
-                    <div style="width: 40px;"></div>
+                    <button class="header-action" id="editFlightBtn" title="重新填写航班信息" aria-label="重新填写航班信息">
+                        ✎
+                    </button>
                 </div>
             </div>
         </header>
@@ -1719,12 +1742,20 @@
             const headerTitle = document.getElementById('headerTitle');
             const favoritesBtn = document.getElementById('favoritesBtn');
             const globalSearch = document.getElementById('globalSearch');
+            const editFlightBtn = document.getElementById('editFlightBtn');
 
             // Hide favorites button on detail and entry
             if (pageId === 'detailPage' || pageId === 'loginPage') {
                 favoritesBtn.style.display = 'none';
             } else {
                 favoritesBtn.style.display = 'flex';
+            }
+
+            // Show edit flight button only when flight info exists and not on entry
+            if (pageId === 'loginPage' || !hasFlightInfo()) {
+                editFlightBtn.style.visibility = 'hidden';
+            } else {
+                editFlightBtn.style.visibility = 'visible';
             }
 
             // Show search only on home
@@ -1762,6 +1793,16 @@
                 backButton.style.visibility = 'hidden';
                 headerTitle.innerHTML = '<span>🧾</span> 航班信息';
                 currentPage = 'login';
+
+                const flightNumberInput = document.getElementById('flightNumberInput');
+                const destinationInput = document.getElementById('destinationInput');
+                if (flightInfo) {
+                    flightNumberInput.value = flightInfo.flightNumber || '';
+                    destinationInput.value = flightInfo.destination || '';
+                } else {
+                    flightNumberInput.value = '';
+                    destinationInput.value = '';
+                }
             }
         }
 
@@ -2188,6 +2229,11 @@
 
             showToast('航班信息已保存', true);
             showPage('homePage');
+        });
+
+        // Edit flight info button
+        document.getElementById('editFlightBtn').addEventListener('click', () => {
+            showPage('loginPage');
         });
 
         // Favorites button
