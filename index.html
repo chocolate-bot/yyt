@@ -190,6 +190,53 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* Entry Page */
+        .entry-card {
+            background: var(--card);
+            border: var(--border-width) solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 18px;
+            box-shadow: var(--shadow);
+        }
+
+        .entry-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 6px;
+            letter-spacing: -0.02em;
+        }
+
+        .entry-subtitle {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+        }
+
+        .primary-btn {
+            width: 100%;
+            padding: 12px 14px;
+            background: var(--primary);
+            color: var(--text);
+            border: var(--border-width) solid var(--border);
+            border-radius: var(--radius);
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--duration) var(--ease);
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .primary-btn:active {
+            transform: translateY(1px);
+            box-shadow: var(--shadow-sm);
+            background: var(--primary-active);
+        }
+
         /* Home Page - Scenario Cards */
         .scenario-grid {
             display: grid;
@@ -1059,6 +1106,27 @@
             </div>
         </div>
 
+        <!-- Entry Page -->
+        <div class="page" id="loginPage">
+            <div class="entry-card">
+                <div class="entry-title">航班信息</div>
+                <div class="entry-subtitle">输入一次，所有广播词自动填入</div>
+                <div class="params-form">
+                    <div class="form-group">
+                        <label for="flightNumberInput">航班号</label>
+                        <input type="text" class="form-input" id="flightNumberInput" placeholder="例如：CA1234">
+                    </div>
+                    <div class="form-group">
+                        <label for="destinationInput">目的地</label>
+                        <input type="text" class="form-input" id="destinationInput" placeholder="例如：伦敦">
+                    </div>
+                </div>
+                <button class="primary-btn" id="enterAppBtn">
+                    <span>进入广播主页</span>
+                </button>
+            </div>
+        </div>
+
         <!-- Home Page -->
         <div class="page active" id="homePage">
             <div class="broadcast-list" id="searchResults" style="display: none;"></div>
@@ -1462,8 +1530,18 @@
         let currentLanguage = 'zh';
         let allBroadcasts = [];
         let favorites = JSON.parse(localStorage.getItem('yiyutong_favorites') || '[]');
+        let flightInfo = JSON.parse(localStorage.getItem('yiyutong_flight_info') || '{}');
         let fromHotCards = false; // Track if we came from hot cards
         let fromSearchResults = false; // Track if we came from search results
+
+        function hasFlightInfo() {
+            return Boolean(flightInfo && flightInfo.flightNumber && flightInfo.destination);
+        }
+
+        function saveFlightInfo(info) {
+            flightInfo = info;
+            localStorage.setItem('yiyutong_flight_info', JSON.stringify(info));
+        }
 
         // Hot templates (必发热区) - Most commonly used
         const hotTemplates = ["三超行李广播", "登机广播"];
@@ -1551,8 +1629,8 @@
 
             // Explicit placeholder patterns only - no generic word detection
             // Flight number: CAxxxx, CAXXXX, CA1234, CA____, ___ (3+ underscores)
-            if (/CA[0-9]{4}|CA[XXXX]{4}|CA_____{3,}|___{3,}|_{3,}/.test(text)) {
-                fields.push({ name: 'flightNumber', label: '航班号', example: 'CA1234', pattern: /CA[0-9]{4}|CA[XXXX]{4}|CA_____{3,}|___{3,}|_{3,}/g });
+            if (/CA[0-9]{4}|CA[XXXX]{4}|CA[xX]{4}|CA_____{3,}|___{3,}|_{3,}/.test(text)) {
+                fields.push({ name: 'flightNumber', label: '航班号', example: 'CA1234', pattern: /CA[0-9]{4}|CA[XXXX]{4}|CA[xX]{4}|CA_____{3,}|___{3,}|_{3,}/g });
             }
 
             // Gate number: CXX, CXX号, C\d+ (only explicit patterns with C prefix)
@@ -1565,8 +1643,8 @@
                 fields.push({ name: 'time', label: '时间', example: '18:00', pattern: /\d{1,2}:\d{2}/g });
             }
 
-            // XX placeholders treated as destination
-            if (/XX+/.test(text)) {
+            // XX placeholders or explicit "前往/飞往/去往" phrases treated as destination
+            if (/XX+/.test(text) || /(前往|飞往|去往)[\u4e00-\u9fffA-Za-z·]+/.test(text)) {
                 fields.push({ name: 'destination', label: '目的地', example: '伦敦', pattern: /XX+/g });
             }
 
@@ -1642,8 +1720,8 @@
             const favoritesBtn = document.getElementById('favoritesBtn');
             const globalSearch = document.getElementById('globalSearch');
 
-            // Hide favorites button on detail page
-            if (pageId === 'detailPage') {
+            // Hide favorites button on detail and entry
+            if (pageId === 'detailPage' || pageId === 'loginPage') {
                 favoritesBtn.style.display = 'none';
             } else {
                 favoritesBtn.style.display = 'flex';
@@ -1680,6 +1758,10 @@
                 headerTitle.innerHTML = '⭐ 我的收藏';
                 currentPage = 'favorites';
                 renderFavoritesList();
+            } else if (pageId === 'loginPage') {
+                backButton.style.visibility = 'hidden';
+                headerTitle.innerHTML = '<span>🧾</span> 航班信息';
+                currentPage = 'login';
             }
         }
 
@@ -1928,6 +2010,16 @@
             html += '</div>';
             container.innerHTML = html;
 
+            // Prefill from saved flight info
+            if (flightInfo) {
+                container.querySelectorAll('.field-input').forEach(input => {
+                    const key = input.dataset.field;
+                    if (flightInfo[key]) {
+                        input.value = flightInfo[key];
+                    }
+                });
+            }
+
             // Add input listeners for real-time preview
             container.querySelectorAll('.field-input').forEach(input => {
                 input.addEventListener('input', () => {
@@ -1982,9 +2074,10 @@
 
                     // Replace based on field type using precise patterns
                     if (field.name === 'flightNumber') {
-                        // Replace CA1234, CAXXXX, CA____, ___ patterns
+                        // Replace CA1234, CAXXXX, CAxxxx, CA____, ___ patterns
                         text = text.replace(/CA[0-9]{4}/g, value);
                         text = text.replace(/CA[XXXX]{4}/g, value);
+                        text = text.replace(/CA[xX]{4}/g, value);
                         text = text.replace(/CA(___+)/g, value);
                         text = text.replace(/(___+)/g, value);
                     }
@@ -2000,8 +2093,11 @@
                         text = text.replace(/\d{1,2}:\d{2}/g, value);
                     }
                     if (field.name === 'destination') {
-                        // Replace destination placeholders (XX+)
+                        // Replace destination placeholders and explicit phrases
                         text = text.replace(/XX+/g, value);
+                        text = text.replace(/前往[\u4e00-\u9fffA-Za-z·]+/g, '前往' + value);
+                        text = text.replace(/飞往[\u4e00-\u9fffA-Za-z·]+/g, '飞往' + value);
+                        text = text.replace(/去往[\u4e00-\u9fffA-Za-z·]+/g, '去往' + value);
                     }
                 }
             });
@@ -2073,6 +2169,25 @@
             } else if (currentPage === 'favorites') {
                 showPage('homePage');
             }
+        });
+
+        // Entry button
+        document.getElementById('enterAppBtn').addEventListener('click', () => {
+            const flightNumber = document.getElementById('flightNumberInput').value.trim();
+            const destination = document.getElementById('destinationInput').value.trim();
+
+            if (!flightNumber || !destination) {
+                showToast('请先填写航班号和目的地');
+                return;
+            }
+
+            saveFlightInfo({
+                flightNumber,
+                destination
+            });
+
+            showToast('航班信息已保存', true);
+            showPage('homePage');
         });
 
         // Favorites button
@@ -2157,7 +2272,12 @@
         renderScenarioCards();
         renderSearchSuggestions();
         updateFavoritesBadge();
-        showPage('homePage');
+
+        if (hasFlightInfo()) {
+            showPage('homePage');
+        } else {
+            showPage('loginPage');
+        }
     </script>
 </body>
 </html>
